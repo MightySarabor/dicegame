@@ -9,6 +9,7 @@ Wenn die Runde startet, öffnet der `GameMaster` ein Socket für die Dauer der R
 **Mit logischen Uhren:**
 
 Hier ist es dem `GameMaster` möglich, die Runden zu zählen. Das benutze ich, um einen Würfelwurf eines Spielers einer bestimmten Runde zuzuordnen. Verschläft der Spieler also eine Runde und das Ergebnis kommt in der nächsten Runde an, so muss der Spieler sogar zwei Runden aussetzen. Eine Runde, die er verschlafen hat, und die Runde danach, weil das der Wurf der Runde davor war. Damit der Spieler aber an zukünftigen Runden teilnehmen kann, wird der Zähler des Spielers erhöht, sodass er ab nächster Runde wieder aktuell ist.
+Diese Umsetzung war deutlich aufwendiger als die erste, denn ich musste in den Klassen Zähler einbauen und diese an den richtigen Stellen erhöhen, damit eine Kausalität zwischen Runde und Wurf bestehen kann. 
 
 Das Fazit zwischen den beiden Codes ist, dass logische Uhren helfen semantische Beziehungen zwischen dem Server und Clienten herzustellen. Somit konnte ich die Würfe der Spieler genauen Runden zu ordnen. Ohne logische Uhr, habe ich dafür keine Methode gefunden. 
 
