@@ -2,3 +2,4 @@ Buunu: 97
 Buunu: 37
 Jack: 72
 Buunu: 82
+nana: 18

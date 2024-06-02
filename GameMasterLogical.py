@@ -84,9 +84,11 @@ def receive_results():
         ergebnisse[runde_counter] = winner  # Ergebnisse für die aktuelle Runde speichern
 
 def log_results():
-    with open("ergebnisse_logical.txt", "a") as file:
+    with open("ergebnisse_logical.txt", "w") as file:  # Öffne die Datei im Schreibmodus ("w")
+        file.truncate()  # Leere den Inhalt der Datei
         for runde, (name, wurf) in ergebnisse.items():
             file.write(f"Gewinner der Runde {runde}: {name} mit einem Wurf von {wurf}\n")
+
 
 def accept_connections(server_socket):
     while True:
